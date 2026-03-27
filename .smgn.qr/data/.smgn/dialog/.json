@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:dialog_list",
+    "title": "[.smgn.qr]メニュー",
+    "exit_action": {
+      "label": "閉じる",
+      "action": {
+        "type": "minecraft:copy_to_clipboard",
+        "value": ""
+      }
+    },
+    "columns": 1,
+    "dialogs": [
+      ".smgn:menu/input"
+    ]
+  }

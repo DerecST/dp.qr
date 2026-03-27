@@ -1,3 +1,5 @@
+gamerule max_command_sequence_length 2147483647
+
 scoreboard objectives add .smgn.Pos.x.calc dummy
 scoreboard objectives add .smgn.Pos.z.calc dummy
 scoreboard objectives add .smgn.url.length dummy

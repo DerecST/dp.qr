@@ -1,3 +1,3 @@
 function .smgn:load
-data merge storage .smgn:.url {url:"https://x.com/SamiGin4"}
+$data merge storage .smgn:.url {url:"$(url)"}
 function .smgn:qr/run_from_storage

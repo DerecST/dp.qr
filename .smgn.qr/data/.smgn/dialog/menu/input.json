@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "[.smgn.qr]URL入力",
+  "external_title": "URL入力",
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "url",
+      "label": "URLを入力して、「実行」をクリック"
+    }
+  ],
+  "columns": 2,
+  "actions": [
+    {
+      "label": "戻る",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": ".smgn:"
+      }
+    },
+    {
+      "label": "実行",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "/function .smgn:qr/exe {url:\"$(url)\"}"
+      }
+    }
+  ]
+}
