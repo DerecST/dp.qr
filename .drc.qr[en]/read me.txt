@@ -1,0 +1,42 @@
+================================================================================
+  .drc.qr[en]  -  read me.txt
+================================================================================
+
+Overview
+  - Minecraft: Java Edition datapack, pack_format 94.1
+  - Version 3 QR code, error-correction level M
+  - Draws by placing blocks on a 128×128 grid at your run position—the area the smallest map can depict
+
+How to use
+  1. Add this pack to the world.
+  2. Open Quick Actions (default: G). Open the [.drc.qr] menu.
+  3. Enter a URL. Optional: reserve space for player-head icons (you place heads yourself).
+  4. Run. If the game warns before running the command, that is normal; continue.
+  5. You may get a map if you have none.
+
+Limits
+  - URL max length: 42 characters (fixed). Longer input shows an error and will not render.
+
+Redistribution
+  - This pack is distributed under the MIT License. Redistribution and modification are allowed only if you follow LICENSE.
+  - Include this folder's LICENSE or the full license text with copies.
+
+Modpacks and bundles
+  - You may include this datapack in modpacks or bundles if you follow the MIT terms (same as above).
+  - Compatibility with specific loaders, mods, or other packs is not tested or guaranteed. Use at your own risk.
+
+Video / streaming (optional credit)
+  - Datapack: .drc.qr (Derec S.T.)
+  - Repo: https://github.com/DerecST/dp.qr
+
+Bug reports
+  - GitHub: https://github.com/DerecST/dp.qr/issues
+  - X (DM): https://x.com/Derec_ST
+  - Please include: game version, steps to reproduce, URL length (you may redact the URL itself).
+
+Author
+  - Derec S.T.
+  - License: MIT (see LICENSE)
+  - Source: https://github.com/DerecST/dp.qr
+
+================================================================================
