@@ -1,35 +1,9 @@
-# dp.qr
-QRコードを生成し、地図に表示するデータパックです。
-
-## 【データパック名】
-.drc.qr
-
-### 《対応バージョン》
- - Minecraft Java Edition Ver.1.21.11
-
-## 【主な機能】
- - 打ち込んだURLを解析し、バージョン3、誤り訂正レベルMのQRコードを作成
-   - QRコードは、実行場所がおさまる最小サイズの地図の範囲に対して、上空にブロックを設置して表示します
-
-## 【操作方法】
- - `Gキー`を押してダイアログメニューを表示
-   - `URLを入力`からURLを入力して実行してください
-     - マイクラの仕様上、警告が挟まりますが、実行してしまって問題ありません
-
-## 参考動画
-https://youtu.be/jvI9QKxougU
-
----
-
 ## English
 
 A Minecraft datapack that generates a QR code from a URL and displays it on a map.
 
 ### Datapack name
-`.drc.qr`
-
-### Supported version
-- Minecraft Java Edition 1.21.11
+.drc.qr
 
 ### Features
 - Parses the URL you enter and builds a Version 3, error-correction level **M** QR code
@@ -43,3 +17,21 @@ A Minecraft datapack that generates a QR code from a URL and displays it on a ma
 ### Reference video
 https://youtu.be/jvI9QKxougU
 
+---
+
+## 日本語
+
+### 【データパック名】
+.drc.qr
+
+### 【主な機能】
+ - 打ち込んだURLを解析し、バージョン3、誤り訂正レベルMのQRコードを作成
+   - QRコードは、実行場所がおさまる最小サイズの地図の範囲に対して、上空にブロックを設置して表示します
+
+### 【操作方法】
+ - `Gキー`を押してダイアログメニューを表示
+   - `URLを入力`からURLを入力して実行してください
+     - マイクラの仕様上、警告が挟まりますが、実行してしまって問題ありません
+
+### 参考動画
+https://youtu.be/jvI9QKxougU
