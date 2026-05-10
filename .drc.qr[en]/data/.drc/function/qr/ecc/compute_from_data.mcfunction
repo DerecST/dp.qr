@@ -1,10 +1,11 @@
 data remove storage .drc:.qr payload.ecc
 data modify storage .drc:.qr payload.ecc set value [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 data remove storage .drc:.qr payload.factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[0]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[0]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -31,12 +32,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[1]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[1]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -63,12 +65,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[2]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[2]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -95,12 +98,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[3]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[3]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -127,12 +131,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[4]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[4]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -159,12 +164,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[5]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[5]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -191,12 +197,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[6]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[6]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -223,12 +230,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[7]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[7]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -255,12 +263,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[8]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[8]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -287,12 +296,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[9]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[9]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -319,12 +329,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[10]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[10]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -351,12 +362,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[11]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[11]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -383,12 +395,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[12]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[12]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -415,12 +428,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[13]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[13]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -447,12 +461,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[14]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[14]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -479,12 +494,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[15]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[15]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -511,12 +527,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[16]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[16]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -543,12 +560,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[17]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[17]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -575,12 +593,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[18]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[18]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -607,12 +626,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[19]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[19]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -639,12 +659,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[20]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[20]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -671,12 +692,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[21]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[21]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -703,12 +725,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[22]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[22]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -735,12 +758,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[23]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[23]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -767,12 +791,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[24]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[24]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -799,12 +824,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[25]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[25]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -831,12 +857,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[26]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[26]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -863,12 +890,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[27]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[27]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -895,12 +923,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[28]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[28]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -927,12 +956,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[29]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[29]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -959,12 +989,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[30]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[30]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -991,12 +1022,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[31]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[31]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1023,12 +1055,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[32]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[32]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1055,12 +1088,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[33]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[33]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1087,12 +1121,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[34]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[34]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1119,12 +1154,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[35]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[35]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1151,12 +1187,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[36]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[36]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1183,12 +1220,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[37]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[37]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1215,12 +1253,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[38]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[38]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1247,12 +1286,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[39]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[39]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1279,12 +1319,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[40]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[40]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1311,12 +1352,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[41]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[41]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1343,12 +1385,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[42]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[42]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1375,12 +1418,13 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
-execute store result score $lhs .smgn.calc run data get storage .drc:.qr payload.data_codewords[43]
-execute store result score $rhs .smgn.calc run data get storage .drc:.qr payload.ecc[0]
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor
+
+execute store result score $lhs .drc.calc run data get storage .drc:.qr payload.data_codewords[43]
+execute store result score $rhs .drc.calc run data get storage .drc:.qr payload.ecc[0]
 function .drc:qr/ecc/xor_scores
-execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .smgn.calc
+execute store result storage .drc:.qr payload.factor int 1 run scoreboard players get $xor .drc.calc
 data modify storage .drc:.qr payload.ecc[0] set from storage .drc:.qr payload.ecc[1]
 data modify storage .drc:.qr payload.ecc[1] set from storage .drc:.qr payload.ecc[2]
 data modify storage .drc:.qr payload.ecc[2] set from storage .drc:.qr payload.ecc[3]
@@ -1407,5 +1451,5 @@ data modify storage .drc:.qr payload.ecc[22] set from storage .drc:.qr payload.e
 data modify storage .drc:.qr payload.ecc[23] set from storage .drc:.qr payload.ecc[24]
 data modify storage .drc:.qr payload.ecc[24] set from storage .drc:.qr payload.ecc[25]
 data modify storage .drc:.qr payload.ecc[25] set value 0
-execute store result score $factor .smgn.calc run data get storage .drc:.qr payload.factor
-execute if score $factor .smgn.calc matches 1.. run function .drc:qr/ecc/apply_factor
+execute store result score $factor .drc.calc run data get storage .drc:.qr payload.factor
+execute if score $factor .drc.calc matches 1.. run function .drc:qr/ecc/apply_factor

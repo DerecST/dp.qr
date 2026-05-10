@@ -1,130 +1,130 @@
-scoreboard players set $res .smgn.calc 0
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $bit .smgn.calc = $b .smgn.calc
-scoreboard players operation $bit .smgn.calc %= $2 .smgn.const
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $lhs .smgn.calc = $res .smgn.calc
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $rhs .smgn.calc = $a .smgn.calc
-execute if score $bit .smgn.calc matches 1 run function .drc:qr/ecc/xor_scores
-execute if score $bit .smgn.calc matches 1 run scoreboard players operation $res .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a2 .smgn.calc = $a .smgn.calc
-scoreboard players operation $a2 .smgn.calc *= $2 .smgn.const
-scoreboard players operation $of .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $of .smgn.calc /= $256 .smgn.const
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $lhs .smgn.calc = $a2 .smgn.calc
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $rhs .smgn.calc = $285 .smgn.const
-execute if score $of .smgn.calc matches 1.. run function .drc:qr/ecc/xor_scores
-execute if score $of .smgn.calc matches 1.. run scoreboard players operation $a2 .smgn.calc = $xor .smgn.calc
-scoreboard players operation $a .smgn.calc = $a2 .smgn.calc
-scoreboard players operation $b .smgn.calc /= $2 .smgn.const
-scoreboard players operation $mul .smgn.calc = $res .smgn.calc
+scoreboard players set $res .drc.calc 0
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $bit .drc.calc = $b .drc.calc
+scoreboard players operation $bit .drc.calc %= $2 .drc.const
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $lhs .drc.calc = $res .drc.calc
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $rhs .drc.calc = $a .drc.calc
+execute if score $bit .drc.calc matches 1 run function .drc:qr/ecc/xor_scores
+execute if score $bit .drc.calc matches 1 run scoreboard players operation $res .drc.calc = $xor .drc.calc
+scoreboard players operation $a2 .drc.calc = $a .drc.calc
+scoreboard players operation $a2 .drc.calc *= $2 .drc.const
+scoreboard players operation $of .drc.calc = $a2 .drc.calc
+scoreboard players operation $of .drc.calc /= $256 .drc.const
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $lhs .drc.calc = $a2 .drc.calc
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $rhs .drc.calc = $285 .drc.const
+execute if score $of .drc.calc matches 1.. run function .drc:qr/ecc/xor_scores
+execute if score $of .drc.calc matches 1.. run scoreboard players operation $a2 .drc.calc = $xor .drc.calc
+scoreboard players operation $a .drc.calc = $a2 .drc.calc
+scoreboard players operation $b .drc.calc /= $2 .drc.const
+scoreboard players operation $mul .drc.calc = $res .drc.calc

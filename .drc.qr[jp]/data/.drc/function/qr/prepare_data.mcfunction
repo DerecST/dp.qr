@@ -7,7 +7,7 @@ data remove storage .drc:.ecc data
 data remove storage .drc:.qr payload
 data remove storage .drc:.qr work
 data remove storage .drc:.qr temp
-scoreboard players operation @s .smgn.ecc.guard = $5000 .smgn.const
+scoreboard players operation @s .drc.ecc.guard = $5000 .drc.const
 
 data modify storage .drc:.url url set from storage .drc:.qr input.url
 function .drc:qr/url_brand/detect

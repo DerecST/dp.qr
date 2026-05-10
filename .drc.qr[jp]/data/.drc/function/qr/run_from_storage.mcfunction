@@ -1,8 +1,8 @@
 # Input: storage .drc:.url {url:"..."}
 # Option: mask is fixed to 0 by load function.
-execute store result score @s .smgn.url.length run data get storage .drc:.url url
-execute if score @s .smgn.url.length matches 43.. run tellraw @s {"text":"[.drc.qr] URLが長すぎます。version3/Mは42文字までです。","color":"red"}
-execute if score @s .smgn.url.length matches 43.. run return 0
+execute store result score @s .drc.url.length run data get storage .drc:.url url
+execute if score @s .drc.url.length matches 43.. run tellraw @s {"text":"[.drc.qr] URLが長すぎます。version3/Mは42文字までです。","color":"red"}
+execute if score @s .drc.url.length matches 43.. run return 0
 
 # phase 1-2: URL analysis + ECC generation
 data modify storage .drc:.qr input.url set from storage .drc:.url url

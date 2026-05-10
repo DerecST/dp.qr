@@ -1,27 +1,27 @@
 gamerule max_command_sequence_length 2147483647
 
-scoreboard objectives add .smgn.Pos.x.calc dummy
-scoreboard objectives add .smgn.Pos.z.calc dummy
-scoreboard objectives add .smgn.url.length dummy
-scoreboard objectives add .smgn.ecc.guard dummy
-scoreboard objectives add .smgn.calc dummy
-scoreboard objectives add .smgn.const dummy
-scoreboard players set $1 .smgn.const 1
-scoreboard players set $2 .smgn.const 2
-scoreboard players set $4 .smgn.const 4
-scoreboard players set $5 .smgn.const 5
-scoreboard players set $8 .smgn.const 8
-scoreboard players set $10 .smgn.const 10
-scoreboard players set $16 .smgn.const 16
-scoreboard players set $32 .smgn.const 32
-scoreboard players set $64 .smgn.const 64
-scoreboard players set $128 .smgn.const 128
-scoreboard players set $256 .smgn.const 256
-scoreboard players set $285 .smgn.const 285
-scoreboard players set $42 .smgn.const 42
-scoreboard players set $255 .smgn.const 255
-scoreboard players set $0 .smgn.const 0
-scoreboard players set $5000 .smgn.const 5000
+scoreboard objectives add .drc.Pos.x.calc dummy
+scoreboard objectives add .drc.Pos.z.calc dummy
+scoreboard objectives add .drc.url.length dummy
+scoreboard objectives add .drc.ecc.guard dummy
+scoreboard objectives add .drc.calc dummy
+scoreboard objectives add .drc.const dummy
+scoreboard players set $1 .drc.const 1
+scoreboard players set $2 .drc.const 2
+scoreboard players set $4 .drc.const 4
+scoreboard players set $5 .drc.const 5
+scoreboard players set $8 .drc.const 8
+scoreboard players set $10 .drc.const 10
+scoreboard players set $16 .drc.const 16
+scoreboard players set $32 .drc.const 32
+scoreboard players set $64 .drc.const 64
+scoreboard players set $128 .drc.const 128
+scoreboard players set $256 .drc.const 256
+scoreboard players set $285 .drc.const 285
+scoreboard players set $42 .drc.const 42
+scoreboard players set $255 .drc.const 255
+scoreboard players set $0 .drc.const 0
+scoreboard players set $5000 .drc.const 5000
 
 # fixed options
 data modify storage .drc:.qr config.mask set value 0

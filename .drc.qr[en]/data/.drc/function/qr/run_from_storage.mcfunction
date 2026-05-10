@@ -1,8 +1,8 @@
 # Input: storage .drc:.url {url:"..."}
 # Option: mask is fixed to 0 by load function.
-execute store result score @s .smgn.url.length run data get storage .drc:.url url
-execute if score @s .smgn.url.length matches 43.. run tellraw @s {"text":"[.drc.qr] URL is too long. Version 3 / M allows up to 42 characters.","color":"red"}
-execute if score @s .smgn.url.length matches 43.. run return 0
+execute store result score @s .drc.url.length run data get storage .drc:.url url
+execute if score @s .drc.url.length matches 43.. run tellraw @s {"text":"[.drc.qr] URL is too long. Version 3 / M allows up to 42 characters.","color":"red"}
+execute if score @s .drc.url.length matches 43.. run return 0
 
 #give map
 execute unless items entity @s container.* minecraft:map unless items entity @s weapon.offhand minecraft:map run give @s minecraft:map
